@@ -18,7 +18,7 @@
     "url": "https://github.com/gitjguerra/Taxi24"
   },
   "author": "Jose Guerra",
-  "license": "GNUAllPermissive",
+  "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/gitjguerra/Taxi24",
   "dependencies": {
     "@babel/cli": "^7.0.0",
