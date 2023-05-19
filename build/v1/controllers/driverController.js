@@ -111,15 +111,14 @@ var DriverController = /*#__PURE__*/function () {
                 _req$query = req.query, myLocation = _req$query.myLocation, range = _req$query.range;
                 ridersLocation = myLocation.split(",");
                 DriversWithInRange = [];
-                Rows.forEach(function (rows) {
-                  var location = _Driver["default"].location.split(",");
-
+                rows.forEach(function (Driver) {
+                  var location = Driver.ubicacion.split(",");
                   var distance = (0, _helpers.calculateDistance)(location[0], location[1], ridersLocation[0], ridersLocation[1]);
                   console.log("distance " + distance + " range: " + range);
 
                   if (distance <= (range || 3)) {
                     DriversWithInRange.push({
-                      Driver: _Driver["default"],
+                      Driver: Driver,
                       DriverRange: "".concat(distance, " KM")
                     });
                   }

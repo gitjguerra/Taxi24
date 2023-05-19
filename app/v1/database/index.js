@@ -70,38 +70,37 @@ const seedDatabase = () => {
   const queryText = 
     `INSERT INTO conductores (nombre, telefono, email, ubicacion, disponible) 
     VALUES
-    ('Jose Guerra', '1234567891', 'jose.guerra@email.com', '18.508826,-69.935228', true),
-    ('James Whats', '1234567892', 'james.whats@email.com', '18.513753,-69.852660', false),
-    ('Juan perez', '1234567893', 'juan.perez@email.com', '18.535652,-69.871714', false),
-    ('Esteban de Jesus', '1234567894', 'estaban.jesus@email.com', '18.449134,-69.960056', true),
-    ('Mark Anthony', '1234567895', 'mark.anthony@email.com', '18.564665,-69.953704', true);
-    ('Arnold swarszeneger', '1234567895', 'arnold.swarszeneger@email.com', '18.503350,-70.017218', true);
-    ('Jhon with', '1234567895', 'jhon.with@gmail.com', '18.501160,-69.942734', true);
+    ('Jose Guerra', '1234567891', 'jose.guerra@gmail.com', '18.508826,-69.935228', false),
+    ('James Whats', '1234567892', 'james.whats@gmail.com', '18.513753,-69.852660', false),
+    ('Juan perez', '1234567893', 'juan.perez@gmail.com', '18.535652,-69.871714', true),
+    ('Esteban de Jesus', '1234567894', 'estaban.jesus@gmail.com', '18.449134,-69.960056', true),
+    ('Mark Anthony', '1234567895', 'mark.anthony@gmail.com', '18.564665,-69.953704', true),
+    ('Arnoldo sanchez', '1234567896', 'arnoldo.sanchez@gmail.com', '18.564665,-69.953704', true),
+    ('Peter with', '1234567897', 'peter.winter@gmail.com', '18.501160,-69.942734', true);
     
     INSERT INTO pasajeros (nombre, telefono, email)
     VALUES
     ('Quincy Jhones', '9876543211', 'quincy.jones@gmail.com'),
     ('Valentina Quintero', '9876543212', 'valentina.quintero@gmail.com'),
     ('Jaguar Mailk', '9876543213', 'jaguar.malik@gmail.com'),
+    ('Jhon With', '9876543215', 'jhon.with@gmail.com');
     
     INSERT INTO viajes (punto_inicio, punto_destino ,estatus, pasajero_id, conductor_id)
     VALUES
     ('18.535652,-69.935228', '18.517038,-69.887881', false, 1, 3),
     ('18.535652,-69.852660', '18.520871,-69.946198', true, 2, 1),
-    ('18.535652,-69.871714', '18.486862,-69.945168', true, 3, 1),
+    ('18.535652,-69.871714', '18.486862,-69.945168', false, 3, 1),
     ('18.449134,-69.960056', '18.458858,-69.931778', false, 2, 2),
     ('18.501160,-69.942734', '18.467325,-69.906372', false, 3, 3);
     
     INSERT INTO facturas (pasajero_id, conductor_id, viaje_id, monto, impuesto)
     VALUES
-    (3, 1, 3, 1130, 113),
-    (4, 1, 1, 800, 80),
-    (2, 1, 2, 700, 70);
-    (1, 1, 2, 500, 50),
-    (1, 2, 4, 300, 30),
-    (4, 1, 1, 600, 60),
-    (2, 1, 2, 70, 0.7);
-  `;
+    (1, 1, 2, 800, 80),
+    (1, 2, 4, 700, 70),
+    (3, 1, 3, 400, 40),
+    (4, 1, 1, 900, 90),
+    (2, 1, 2, 200, 20);
+    `;
 
   pool
     .query(queryText)

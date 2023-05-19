@@ -132,11 +132,11 @@ var TripController = /*#__PURE__*/function () {
                 _yield$Trip$updateTri = _context3.sent;
                 rows = _yield$Trip$updateTri.rows;
                 _context3.next = 10;
-                return _Driver["default"].updateDriver(true, rows[0].driver_id);
+                return _Driver["default"].updateDriver(true, rows[0].conductor_id);
 
               case 10:
-                _getCoordinates = (0, _helpers.getCoordinates)(rows[0].departure), lon1 = _getCoordinates.lon, lat1 = _getCoordinates.lat;
-                _getCoordinates2 = (0, _helpers.getCoordinates)(rows[0].destination), lon2 = _getCoordinates2.lon, lat2 = _getCoordinates2.lat;
+                _getCoordinates = (0, _helpers.getCoordinates)(rows[0].punto_inicio), lon1 = _getCoordinates.lon, lat1 = _getCoordinates.lat;
+                _getCoordinates2 = (0, _helpers.getCoordinates)(rows[0].punto_destino), lon2 = _getCoordinates2.lon, lat2 = _getCoordinates2.lat;
                 distance = (0, _helpers.calculateDistance)(lat1, lon1, lat2, lon2);
                 _context3.next = 15;
                 return _Invoice["default"].create({

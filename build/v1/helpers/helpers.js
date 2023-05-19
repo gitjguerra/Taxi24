@@ -6,8 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.validateCoordinates = exports.cleanJoiValidator = exports.getCoordinates = exports.arraySorter = exports.calculateDistance = void 0;
 
 var calculateDistance = function calculateDistance(lat1, lon1, lat2, lon2) {
-  console.log("Llego a calculateDistance");
-
   if (lat1 == lat2 && lon1 == lon2) {
     return 0;
   } else {
@@ -20,7 +18,6 @@ var calculateDistance = function calculateDistance(lat1, lon1, lat2, lon2) {
     dist = dist * 180 / Math.PI;
     dist = dist * 60 * 1.1515;
     dist = dist * 1.609344;
-    console.log("distance: " + dist.toFixed(1));
     return parseFloat(dist.toFixed(1));
   }
 };
