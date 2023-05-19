@@ -1,0 +1,60 @@
+{
+  "name": "taxi24",
+  "version": "1.0.1",
+  "description": "testQuiz",
+  "scripts": {
+    "db:create": "node app/v1/database createTables && node app/v1/database seedDatabase",
+    "db:seed": "node app/v1/database seedDatabase",
+    "db:drop": "node app/v1/database dropTables",
+    "clean": "rimraf build",
+    "build-server": "babel -d ./build ./app -s",
+    "build": "yarn run clean && yarn run build-server",
+    "start-dev": "nodemon --exec babel-node ./app/v1/server.js",
+    "prestart": "yarn run build",
+    "start": "node ./build/v1/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitjguerra/taxi24.git"
+  },
+  "author": "Jose Guerra",
+  "license": "MIT",
+  "homepage": "https://github.com/gitjguerra/taxi24",
+  "dependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-transform-async-to-generator": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/register": "^7.9.0",
+    "@hapi/joi": "^17.1.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-watch": "^7.0.0",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "express": "^4.17.1",
+    "express-list-endpoints": "^4.0.1",
+    "express-swagger-generator": "^1.1.17",
+    "make-runnable": "^1.3.6",
+    "pg": "^8.0.3",
+    "pg-hstore": "^2.3.3",
+    "prettier": "^2.0.5",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "husky": "^4.2.5",
+    "jest": "^25.5.2",
+    "lint-staged": "^10.2.2",
+    "nodemon": "^2.0.3",
+    "rimraf": "^5.0.1"
+  }
+}
