@@ -1,0 +1,1303 @@
+{
+	"info": {
+		"_postman_id": "13cfa6b2-992b-43eb-b6b2-5bc02f62c88f",
+		"name": "taxi-24",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2986849"
+	},
+	"item": [
+		{
+			"name": "trips",
+			"item": [
+				{
+					"name": "Create a new trip",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/trips",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"trips"
+							]
+						},
+						"description": "Create a new ‘Trip’ request by assigning a driver to a rider"
+					},
+					"response": [
+						{
+							"name": "Create a new ‘Trip’ request by assigning a driver to a rider",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"name": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"departure\":\"-1.956537,30.063616\",\n\t\"destination\": \"-1.956537,31.063616\",\n\t\"riderId\":1,\n\t\"driverId\": 1\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/trips",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"trips"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "173",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 12 May 2020 15:54:15 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"ad-iuyxIwjhLlRhfP1eRgIeaG5jYXc\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Trip created successfully\",\"trip\":{\"id\":17,\"departure\":\"-1.956537,30.063616\",\"destination\":\"-1.956537,31.063616\",\"is_complete\":false,\"rider_id\":1,\"driver_id\":1}}"
+						},
+						{
+							"name": "Create a new ‘Trip’ request by assigning a driver to a rider",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"name": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/trips",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"trips"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "173",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 12 May 2020 15:54:15 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"ad-iuyxIwjhLlRhfP1eRgIeaG5jYXc\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Trip created successfully\",\"trip\":{\"id\":17,\"departure\":\"-1.956537,30.063616\",\"destination\":\"-1.956537,31.063616\",\"is_complete\":false,\"rider_id\":1,\"driver_id\":1}}"
+						}
+					]
+				},
+				{
+					"name": "Complete a trip",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/trips/7/complete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"trips",
+								"7",
+								"complete"
+							]
+						},
+						"description": "Complete a trip"
+					},
+					"response": [
+						{
+							"name": "Complete a trip",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/trips/7/complete",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"trips",
+										"7",
+										"complete"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "201",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Wed, 13 May 2020 02:48:29 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"c9-T7Dbrt/PL9qoMyaGllzvNVA/y28\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Trip completed successfully\",\"invoiceId\":11,\"cost\":77770,\"trip\":{\"id\":7,\"departure\":\"-1.956537,30.063616\",\"destination\":\"-1.956537,31.063616\",\"is_complete\":true,\"rider_id\":1,\"driver_id\":2}}"
+						}
+					]
+				},
+				{
+					"name": "Active Trips",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/trips",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"trips"
+							]
+						},
+						"description": "Get a list of all active Trips"
+					},
+					"response": [
+						{
+							"name": "Active Trips",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/trips",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"trips"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "876",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Wed, 13 May 2020 02:50:29 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"36c-qq5AgcVD9ao4+BGYZ86jvdv5ooY\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":2,\"departure\":\"-1.978963,30.223335\",\"destination\":\"-1.956537,30.063616\",\"is_complete\":true,\"rider_id\":2,\"driver_id\":1},{\"id\":3,\"departure\":\"-1.949549,30.126161\",\"destination\":\"-1.956537,30.063616\",\"is_complete\":true,\"rider_id\":3,\"driver_id\":1},{\"id\":1,\"departure\":\"-1.977940,30.043773\",\"destination\":\"-1.956537,30.063616\",\"is_complete\":true,\"rider_id\":1,\"driver_id\":3},{\"id\":4,\"departure\":\"-1.971142,30.103683\",\"destination\":\"-1.956537,30.063616\",\"is_complete\":true,\"rider_id\":2,\"driver_id\":2},{\"id\":5,\"departure\":\"-1.971142,30.103683\",\"destination\":\"-1.956537,30.063616\",\"is_complete\":true,\"rider_id\":3,\"driver_id\":3},{\"id\":6,\"departure\":\"-1.956537,30.063616\",\"destination\":\"-1.956537,31.063616\",\"is_complete\":true,\"rider_id\":1,\"driver_id\":2},{\"id\":7,\"departure\":\"-1.956537,30.063616\",\"destination\":\"-1.956537,31.063616\",\"is_complete\":true,\"rider_id\":1,\"driver_id\":2}]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "drivers",
+			"item": [
+				{
+					"name": "Get all drivers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"departure\":\"-1.956537,30.063616\",\n\t\"destination\": \"-1.956537,31.063616\",\n\t\"riderId\":1,\n\t\"driverId\": 1000\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/v1/drivers",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"drivers"
+							]
+						},
+						"description": "Get a list of all drivers"
+					},
+					"response": [
+						{
+							"name": "Get all drivers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"departure\":\"-1.956537,30.063616\",\n\t\"destination\": \"-1.956537,31.063616\",\n\t\"riderId\":1,\n\t\"driverId\": 1000\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/drivers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"drivers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "684",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Wed, 13 May 2020 02:39:40 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"2ac-2ofxZM//0bwJ2J20kO78JAB4eWI\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":3,\"names\":\"John Gakuba\",\"phone\":\"0784758315\",\"email\":\"john.gakuba@email.com\",\"location\":\"-1.949549,30.126161\",\"is_available\":false},{\"id\":4,\"names\":\"Henry Mugenzi\",\"phone\":\"0784752395\",\"email\":\"henry.mugenzi@email.com\",\"location\":\"-1.978963,30.223335\",\"is_available\":true},{\"id\":5,\"names\":\"Manzi Eric\",\"phone\":\"0784758395\",\"email\":\"manzi.eric@email.com\",\"location\":\"-1.977940,30.043773\",\"is_available\":true},{\"id\":2,\"names\":\"Allan Smith\",\"phone\":\"0784758305\",\"email\":\"allan.smith@email.com\",\"location\":\"-1.971142,30.103683\",\"is_available\":true},{\"id\":1,\"names\":\"John Doe\",\"phone\":\"0784758395\",\"email\":\"john.doe@email.com\",\"location\":\"-1.956537,30.063616\",\"is_available\":false}]"
+						}
+					]
+				},
+				{
+					"name": "Get available Drivers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/drivers/available",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"drivers",
+								"available"
+							]
+						},
+						"description": "Get a list of all available drivers"
+					},
+					"response": []
+				},
+				{
+					"name": "Get drivers within range",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/drivers/available/range?myLocation=-1.956537,30.063616&range=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"drivers",
+								"available",
+								"range"
+							],
+							"query": [
+								{
+									"key": "myLocation",
+									"value": "-1.956537,30.063616"
+								},
+								{
+									"key": "range",
+									"value": "4"
+								}
+							]
+						},
+						"description": "Get a list of all available drivers within 3km for a specific"
+					},
+					"response": [
+						{
+							"name": "Get drivers within range",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/drivers/available/range?myLocation=-1.956537,30.063616&range=4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"drivers",
+										"available",
+										"range"
+									],
+									"query": [
+										{
+											"key": "myLocation",
+											"value": "-1.956537,30.063616"
+										},
+										{
+											"key": "range",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "170",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Wed, 13 May 2020 03:08:06 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"aa-BZIymxX9a+5cVOcw3bfOifSKlE0\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "[{\"driver\":{\"id\":5,\"names\":\"Manzi Eric\",\"phone\":\"0784758395\",\"email\":\"manzi.eric@email.com\",\"location\":\"-1.977940,30.043773\",\"is_available\":true},\"driverRange\":\"3.2 KM\"}]"
+						}
+					]
+				},
+				{
+					"name": "Get a driver",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/drivers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"drivers",
+								"1"
+							]
+						},
+						"description": "Get a specific driver by ID"
+					},
+					"response": [
+						{
+							"name": "Get a driver",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/drivers/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"drivers",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "131",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Wed, 13 May 2020 02:45:49 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"83-6D+j5Yqb2jVGhUzQa5x4Zc22Ytc\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"id\":1,\"names\":\"John Doe\",\"phone\":\"0784758395\",\"email\":\"john.doe@email.com\",\"location\":\"-1.956537,30.063616\",\"is_available\":false}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "riders",
+			"item": [
+				{
+					"name": "Get closest drivers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/riders/closest?myLocation=-1.956537,31.063616",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"riders",
+								"closest"
+							],
+							"query": [
+								{
+									"key": "myLocation",
+									"value": "-1.956537,31.063616"
+								}
+							]
+						},
+						"description": "For a specific rider, get a list of the 3 closest drivers"
+					},
+					"response": [
+						{
+							"name": "Get closet drivers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/riders/closest?myLocation=-1.956537,31.063616",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"riders",
+										"closest"
+									],
+									"query": [
+										{
+											"key": "myLocation",
+											"value": "-1.956537,31.063616"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "464",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Wed, 13 May 2020 02:57:23 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1d0-36vlP7o2OGFsq/W/WKCgCBS8SYg\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":4,\"names\":\"Henry Mugenzi\",\"phone\":\"0784752395\",\"email\":\"henry.mugenzi@email.com\",\"location\":\"-1.978963,30.223335\",\"is_available\":true,\"distance\":93.5},{\"id\":2,\"names\":\"Allan Smith\",\"phone\":\"0784758305\",\"email\":\"allan.smith@email.com\",\"location\":\"-1.971142,30.103683\",\"is_available\":true,\"distance\":106.7},{\"id\":5,\"names\":\"Manzi Eric\",\"phone\":\"0784758395\",\"email\":\"manzi.eric@email.com\",\"location\":\"-1.977940,30.043773\",\"is_available\":true,\"distance\":113.4}]"
+						}
+					]
+				},
+				{
+					"name": "All Riders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/riders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"riders"
+							]
+						},
+						"description": "Get a list of all riders"
+					},
+					"response": [
+						{
+							"name": "All drivers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/riders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"riders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "433",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Wed, 13 May 2020 02:51:50 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1b1-V5FWPfY3ATI1VYMWSfFcko9UiL0\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":1,\"names\":\"Laura inema\",\"phone\":\"0786893958\",\"email\":\"laura.inema@email.com\"},{\"id\":2,\"names\":\"Chris Rock\",\"phone\":\"0787940695\",\"email\":\"chris.rock@email.com\"},{\"id\":3,\"names\":\"Bushido Bushali\",\"phone\":\"0780033958\",\"email\":\"bushido.bushali@email.com\"},{\"id\":4,\"names\":\"Maleek Berry\",\"phone\":\"0734895855\",\"email\":\"maleek.berry@email.com\"},{\"id\":5,\"names\":\"Mike Kayehuri\",\"phone\":\"0769785498\",\"email\":\"mike.kayehura@email.com\"}]"
+						}
+					]
+				},
+				{
+					"name": "Get One Rider",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/riders/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"riders",
+								"1"
+							]
+						},
+						"description": "Get a specific rider by ID"
+					},
+					"response": [
+						{
+							"name": "Get One Driver",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/riders/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"riders",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "83",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Wed, 13 May 2020 02:56:56 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"53-sjZEkgEmRQXYYgsL/TzGG0VZpAk\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"id\":1,\"names\":\"Laura inema\",\"phone\":\"0786893958\",\"email\":\"laura.inema@email.com\"}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "invoice",
+			"item": [
+				{
+					"name": "Create a new invoice",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"viaje_id\": 2,\r\n  \"pasajero_id\": 2,\r\n  \"conductor_id\": 1,\r\n  \"monto\": 100,\r\n  \"impuesto\": 10\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/invoice",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"invoice"
+							]
+						},
+						"description": "Create a new ‘Trip’ request by assigning a driver to a rider"
+					},
+					"response": [
+						{
+							"name": "Create a new ‘Trip’ request by assigning a driver to a rider",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"name": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"departure\":\"-1.956537,30.063616\",\n\t\"destination\": \"-1.956537,31.063616\",\n\t\"riderId\":1,\n\t\"driverId\": 1\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/trips",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"trips"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "173",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 12 May 2020 15:54:15 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"ad-iuyxIwjhLlRhfP1eRgIeaG5jYXc\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Trip created successfully\",\"trip\":{\"id\":17,\"departure\":\"-1.956537,30.063616\",\"destination\":\"-1.956537,31.063616\",\"is_complete\":false,\"rider_id\":1,\"driver_id\":1}}"
+						},
+						{
+							"name": "Create a new ‘Trip’ request by assigning a driver to a rider",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"name": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/trips",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"trips"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "173",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 12 May 2020 15:54:15 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"ad-iuyxIwjhLlRhfP1eRgIeaG5jYXc\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Trip created successfully\",\"trip\":{\"id\":17,\"departure\":\"-1.956537,30.063616\",\"destination\":\"-1.956537,31.063616\",\"is_complete\":false,\"rider_id\":1,\"driver_id\":1}}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
