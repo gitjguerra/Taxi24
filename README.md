@@ -36,38 +36,35 @@ api/v1/invoice                  => Post a new invoice
 ### Estructure del Proyecto
 ```bash
 ├── app
-│   ├── v1
+│   └── v1
 │      ├── controllers
 │      │     ├── driverController.js
 │      │     ├── riderController.js
-│      │     ├── tripController.js
+│      │     └── tripController.js
 │      ├── database
-│      │     ├── queries
-│      │     │      ├── Driver.js
-│      │     │      ├── Invoice.js
-│      │     │      ├── Rider.js
-│      │     │      ├── Trip.js
-│      │     ├── index.js
+│      │     ├── Driver.js
+│      │     ├── Invoice.js
+│      │     ├── Rider.js
+│      │     ├── Trip.js
+│      │     └── index.js
 │      ├── helpers
-│      │     ├── helpers.js
+│      │     └── helpers.js
 │      ├── middlewares
 │      │     ├── error.js
 │      │     ├── modelValidator.js
-│      │     ├── validators.js
+│      │     └── validators.js
 │      ├── routes
 │      │     ├── index.js
 │      │     ├── riderRoutes.js
 │      │     ├── tripRoutes.js
 │      │     ├── driverRoutes.js
-│      │     ├── invoiceRoutes.js
-│      ├── app.js
-│      ├── index.js
+│      │     └── invoiceRoutes.js
+│      └── server.js
 │   
 ├── build
 ├── node_modules
 ├── .bablrc
-└── .gitignore
-├── LICENSE
+├── .gitignore
 ├── package.json
 ├── README.md
 └── yarn.lock
