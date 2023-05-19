@@ -4,7 +4,7 @@
 - PostGreSQL
 
 ### How test
-- import the postman script in your system and try the taxi24 endpoints
+- import the postman script in your system located in /docs directory and try the taxi24 endpoints
 
 ### Getting Started
 - `$ cd taxi24`
