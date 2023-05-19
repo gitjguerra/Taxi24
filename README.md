@@ -3,6 +3,9 @@
 - ExpressJS
 - PostGreSQL
 
+### How test
+- import the postman script in your system and try the taxi24 endpoints
+
 ### Getting Started
 - `$ cd taxi24`
 - Run `$ yarn install` or `$ npm install` to install the package dependencies
