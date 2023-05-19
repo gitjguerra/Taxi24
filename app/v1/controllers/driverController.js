@@ -21,17 +21,18 @@ export default class DriverController {
 
   static async getAvailableDriversWithInRange(req, res) {
     const { rows } = await Driver.getAvailableDrivers();
-    const { myLocation, range } = req.query;
+    const { myLocation, range } = req.query;    
     const ridersLocation = myLocation.split(",");
     let DriversWithInRange = [];
     rows.forEach((Driver) => {
-      const location = Driver.location.split(",");
+      const location = Driver.ubicacion.split(",");
       const distance = calculateDistance(
         location[0],
         location[1],
         ridersLocation[0],
         ridersLocation[1]
       );
+      console.log("distance " + distance + " range: " + range);
       if (distance <= (range || 3)) {
         DriversWithInRange.push({ Driver, DriverRange: `${distance} KM` });
       }
