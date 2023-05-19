@@ -20,8 +20,8 @@
 							}
 						],
 						"body": {
-							"mode": "formdata",
-							"formdata": []
+							"mode": "raw",
+							"raw": "{\r\n    \"departure\": \"18.517038, -69.887881\", \r\n    \"destination\": \"18.535652,-69.871714\", \r\n    \"riderId\": 2, \r\n    \"driverId\": 2\r\n}"
 						},
 						"url": {
 							"raw": "http://localhost:3000/api/v1/trips",
@@ -211,7 +211,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/v1/trips/7/complete",
+							"raw": "http://localhost:3000/api/v1/trips/3/complete",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -221,7 +221,7 @@
 								"api",
 								"v1",
 								"trips",
-								"7",
+								"3",
 								"complete"
 							]
 						},
@@ -555,6 +555,9 @@
 				},
 				{
 					"name": "Get drivers within range",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -563,7 +566,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/v1/drivers/available/range?myLocation=-1.956537,30.063616&range=4",
+							"raw": "http://localhost:3000/api/v1/drivers/available/range?myLocation=18.535652,-69.871714&range=8",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -579,11 +582,11 @@
 							"query": [
 								{
 									"key": "myLocation",
-									"value": "-1.956537,30.063616"
+									"value": "18.535652,-69.871714"
 								},
 								{
 									"key": "range",
-									"value": "4"
+									"value": "8"
 								}
 							]
 						},
@@ -1294,6 +1297,106 @@
 							],
 							"cookie": [],
 							"body": "{\"message\":\"Trip created successfully\",\"trip\":{\"id\":17,\"departure\":\"-1.956537,30.063616\",\"destination\":\"-1.956537,31.063616\",\"is_complete\":false,\"rider_id\":1,\"driver_id\":1}}"
+						}
+					]
+				},
+				{
+					"name": "All Invoices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/invoices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"invoices"
+							]
+						},
+						"description": "Get a list of all riders"
+					},
+					"response": [
+						{
+							"name": "All drivers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/riders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"riders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "433",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Wed, 13 May 2020 02:51:50 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1b1-V5FWPfY3ATI1VYMWSfFcko9UiL0\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":1,\"names\":\"Laura inema\",\"phone\":\"0786893958\",\"email\":\"laura.inema@email.com\"},{\"id\":2,\"names\":\"Chris Rock\",\"phone\":\"0787940695\",\"email\":\"chris.rock@email.com\"},{\"id\":3,\"names\":\"Bushido Bushali\",\"phone\":\"0780033958\",\"email\":\"bushido.bushali@email.com\"},{\"id\":4,\"names\":\"Maleek Berry\",\"phone\":\"0734895855\",\"email\":\"maleek.berry@email.com\"},{\"id\":5,\"names\":\"Mike Kayehuri\",\"phone\":\"0769785498\",\"email\":\"mike.kayehura@email.com\"}]"
 						}
 					]
 				}

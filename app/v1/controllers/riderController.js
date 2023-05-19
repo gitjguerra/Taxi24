@@ -28,7 +28,7 @@ export default class RiderControllers {
     const driversDistance = [];
     rows.map((driver) => {
       const { lon: lon1, lat: lat1 } = getCoordinates(myLocation);
-      const { lon: lon2, lat: lat2 } = getCoordinates(driver.location);
+      const { lon: lon2, lat: lat2 } = getCoordinates(driver.ubicacion);
       const distance = calculateDistance(lat1, lon1, lat2, lon2);
       driver["distance"] = distance;
       driversDistance.push(driver);
