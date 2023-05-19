@@ -9,6 +9,7 @@
 ### Getting Started
 - `$ cd taxi24`
 - Run `$ yarn install` or `$ npm install` to install the package dependencies
+- crear una base de datos postgress con el nombre de `taxi24_qik`
 - crear e insertar datos `$ yarn run db:create` creará la tablas y los datos necesarios
 - `$ yarn start-dev` iniciar servidor de desarrollo,
 - `$ yarn start` iniciar servidor en produccion
