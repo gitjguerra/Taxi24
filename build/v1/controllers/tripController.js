@@ -114,9 +114,10 @@ var TripController = /*#__PURE__*/function () {
               case 0:
                 id = req.params.id;
                 trip = req.trip;
+                console.log("id1 " + id);
 
                 if (!trip.rows[0].estatus) {
-                  _context3.next = 4;
+                  _context3.next = 5;
                   break;
                 }
 
@@ -124,30 +125,37 @@ var TripController = /*#__PURE__*/function () {
                   message: "Viaje ya está finalizado !!!"
                 }));
 
-              case 4:
-                _context3.next = 6;
+              case 5:
+                console.log("id2 " + id);
+                _context3.next = 8;
                 return _Trip["default"].updateTrip(id);
 
-              case 6:
+              case 8:
                 _yield$Trip$updateTri = _context3.sent;
                 rows = _yield$Trip$updateTri.rows;
-                _context3.next = 10;
+                _context3.next = 12;
                 return _Driver["default"].updateDriver(true, rows[0].conductor_id);
 
-              case 10:
+              case 12:
+                console.log("conductor_id " + rows[0].conductor_id);
                 _getCoordinates = (0, _helpers.getCoordinates)(rows[0].punto_inicio), lon1 = _getCoordinates.lon, lat1 = _getCoordinates.lat;
                 _getCoordinates2 = (0, _helpers.getCoordinates)(rows[0].punto_destino), lon2 = _getCoordinates2.lon, lat2 = _getCoordinates2.lat;
                 distance = (0, _helpers.calculateDistance)(lat1, lon1, lat2, lon2);
-                _context3.next = 15;
+                console.log("distance " + distance);
+                console.log("rows[0].pasajero_id " + rows[0].pasajero_id);
+                console.log("rows[0].conductor_id " + rows[0].conductor_id);
+                console.log("cost " + distance * COSTOKM + distance * COSTOKM * 0.1);
+                console.log("cost " + distance * COSTOKM * 0.1);
+                _context3.next = 23;
                 return _Invoice["default"].create({
                   tripId: id,
                   riderId: rows[0].pasajero_id,
                   driverId: rows[0].conductor_id,
                   cost: distance * COSTOKM + distance * COSTOKM * 0.1,
-                  impuesto: cost * 0.1
+                  impuesto: distance * COSTOKM * 0.1
                 });
 
-              case 15:
+              case 23:
                 invoice = _context3.sent;
                 return _context3.abrupt("return", res.status(200).json({
                   message: "Viaje culminado con exito !!!",
@@ -155,7 +163,7 @@ var TripController = /*#__PURE__*/function () {
                   invoice: invoice.rows[0]
                 }));
 
-              case 17:
+              case 25:
               case "end":
                 return _context3.stop();
             }

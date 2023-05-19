@@ -15,11 +15,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gitjguerra/taxi24.git"
+    "url": "https://github.com/gitjguerra/Taxi24"
   },
   "author": "Jose Guerra",
-  "license": "MIT",
-  "homepage": "https://github.com/gitjguerra/taxi24",
+  "license": "GNUAllPermissive",
+  "homepage": "https://github.com/gitjguerra/Taxi24",
   "dependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.9.6",

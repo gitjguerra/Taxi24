@@ -127,7 +127,7 @@ var RiderControllers = /*#__PURE__*/function () {
                       lon1 = _getCoordinates.lon,
                       lat1 = _getCoordinates.lat;
 
-                  var _getCoordinates2 = (0, _helpers.getCoordinates)(driver.location),
+                  var _getCoordinates2 = (0, _helpers.getCoordinates)(driver.ubicacion),
                       lon2 = _getCoordinates2.lon,
                       lat2 = _getCoordinates2.lat;
 

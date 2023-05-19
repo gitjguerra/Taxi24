@@ -125,7 +125,7 @@ var DriverController = /*#__PURE__*/function () {
                 });
                 return _context3.abrupt("return", DriversWithInRange.length < 1 ? res.status(200).json({
                   message: "No hay conductores cercanos a 3 KM",
-                  options: "<distancia> parámetro de consulta para aumentar la distancia"
+                  options: "sume valores al parámetro range para aumentar la distancia"
                 }) : res.status(200).json(DriversWithInRange));
 
               case 9:
